@@ -196,7 +196,7 @@ body {
   border: 4px solid rgba(255, 255, 255, 0.06);
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.02),
+    rgba(255, 255,  255, 0.02),
     rgba(255, 255, 255, 0.01)
   );
   pointer-events: auto;
