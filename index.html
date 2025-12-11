@@ -5,52 +5,130 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Albin Jojo — Portfolio</title>
 
-    <!-- GitHub fonts (optional) -->
-    <link
-      rel="stylesheet"
-      href="https://github.githubassets.com/fonts/hubot-sans/Hubot-Sans.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://github.githubassets.com/fonts/monaspace/monaspace.css"
-    />
-
-    <!-- Main styles -->
+    <!-- External stylesheet -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <h1 class="textbefore">Albin Jojo <span class="blue-dot"></span></h1>
+    <div class="bg-grid"></div>
 
-      <nav class="top-nav">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-      </nav>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <h1 class="textbefore">Albin Jojo</h1>
+
+        <nav class="top-nav" aria-label="Primary">
+          <a href="#">Home</a>
+          <a href="#">Projects</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="heroframe">
-          <!-- Left: hero text -->
           <div class="herotext">
             <h3 class="status">Electronics and Computer Engineering Student</h3>
-            <p class="qualifications">
-              Building Intelligent Systems through Embedded Engineering, Machine
-              Learning, and Software Development
-            </p>
+            <p class="qualifications">Embedded & Software Engineer</p>
+            <h5 class="subtext">
+              Building Intelligent Systems through<br />
+              Embedded Engineering | Machine Learning | Software Development
+            </h5>
           </div>
 
-          <!-- Right: profile with rotating gradient frame -->
           <div class="profile-container">
-            <div class="gradient-ring">
+            <div class="gradient-ring" aria-hidden="true">
               <div class="inner-circle">
-                <img src="images/profile.jpg" alt="Profile photo" />
+                <img
+                  src="images/profile.jpg"
+                  alt="Albin Jojo — profile photo"
+                  onerror="this.style.display='none'"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="stats">
+        <div class="stats-grid">
+          <div class="stat">
+            <span class="stat-number" data-target="21">0</span>
+            <span class="stat-label">Age</span>
+          </div>
+
+          <div class="stat">
+            <span class="stat-number" data-target="2">0</span>
+            <span class="stat-label">Years of<br />experience</span>
+          </div>
+
+          <div class="stat">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label">Projects worked<br />on</span>
+          </div>
+        </div>
+      </section>
+      <section class="projects-grid">
+  <!-- 8 cards (4x2) -->
+  <div class="project-card">
+    <img src="images/RFIDproject.jpg" alt="Smart RFID attendence monitor" />
+    <h3>Smart RFID attendence monitor</h3>
+    <p>Smart attendence monitoring system through edge computing.</p>
+    <span class="date">22 Oct 2025</span>
+  </div>
+
+  <div class="project-card">
+    <img src="images/smartglassProject.jpg" alt="Smart Glass" />
+    <h3>Smart Glass</h3>
+    <p>Smart AI glass for visually challenged people.</p>
+    <span class="date">22 Feb 2025</span>
+  </div>
+
+  <div class="project-card">
+    <img src="images/sample3.jpg" alt="Project Image" />
+    <h3>Mini Project</h3>
+    <p>...</p>
+    <span class="date">2026</span>
+  </div>
+
+  <div class="project-card">
+    <img src="images/sample4.jpg" alt="Project Image" />
+    <h3>Strishti 2026</h3>
+    <p>...</p>
+    <span class="date">2022</span>
+  </div>
+
+  <div class="project-card">
+    <img src="images/sample5.jpg" alt="Project Image" />
+    <h3>Final Project</h3>
+    <p>...</p>
+    <span class="date">2023</span>
+  </div>
+
+  <div class="project-card">
+    <img src="images/sample6.jpg" alt="Project Image" />
+    <h3>Side Project 1</h3>
+    <p>...</p>
+    <span class="date">2024</span>
+  </div>
+
+  <div class="project-card">
+    <img src="images/sample7.jpg" alt="Project Image" />
+    <h3>Side Project 2</h3>
+    <p>...</p>
+    <span class="date">2021</span>
+  </div>
+
+  <div class="project-card">
+    <img src="images/sample8.jpg" alt="Project Image" />
+    <h3>Side Project 3</h3>
+    <p>...</p>
+    <span class="date">2022</span>
+  </div>
+</section>
+
     </main>
+
+    <script src="count.js"></script>
+
   </body>
 </html>
