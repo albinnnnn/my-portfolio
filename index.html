@@ -1,170 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Albin Jojo — Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
-rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Albin Jojo - Electronics & Computer Engineering Student specializing in Embedded Engineering, Machine Learning, and Software Development" />
+    
+    <title>Albin Jojo — Portfolio</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Optimized font loading -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lekton:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- iOS Safari optimizations -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  </head>
 
-<body>
-  <div class="bg-grid"></div>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
 
-  <!-- Header / Navbar -->
-  <header class="site-header">
-    <div class="site-header-inner">
-      <span class="textbefore">Albin Jojo</span>
-      <nav class="top-nav">
+    <!-- Header / Navbar -->
+    <header class="site-header" role="banner">
+      <div class="site-header-inner">
+        <span class="textbefore" aria-label="Albin Jojo">Albin Jojo</span>
+        <nav class="top-nav" role="navigation" aria-label="Main navigation">
+          <span class="nav-pill" aria-hidden="true"></span>
+          <a href="#home" class="active">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger-inner"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+      <nav class="mobile-menu-nav" role="navigation" aria-label="Mobile navigation">
         <a href="#home" class="active">Home</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
-  </header>
 
- <main id="home">
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="heroframe">
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="heroframe">
+          <!-- Text Content -->
+          <div class="herotext">
+            <span class="status" role="status">Electronics & Computer Engineering Student</span>
 
-      <!-- Text Content -->
-      <div class="herotext">
-        <span class="status">Electronics & Computer Engineering Student</span>
+            <h1 class="qualifications">Embedded & Software Engineer</h1>
 
-        <h1 class="qualifications">
-          Embedded & Software Engineer
-        </h1>
+            <p class="subtext">
+              Designing and building intelligent systems through
+              <strong>Embedded Engineering</strong>,
+              <strong>Machine Learning</strong>, and
+              <strong>Software Development</strong>.
+            </p>
 
-        <p class="subtext">
-          Designing and building intelligent systems through
-          <strong>Embedded Engineering</strong>,
-          <strong>Machine Learning</strong>, and
-          <strong>Software Development</strong>.
-        </p>
+            <!-- Call to Action -->
+            <div class="hero-actions">
+              <a href="#projects" class="hero-btn primary">View Projects</a>
+              <a href="#contact" class="hero-btn secondary">Contact Me</a>
+            </div>
+          </div>
 
-        <!-- Optional CTA (recommended) -->
-        <div class="hero-actions">
-          <a href="#projects" class="hero-btn primary">View Projects</a>
-          <a href="#contact" class="hero-btn secondary">Contact Me</a>
-        </div>
-      </div>
-
-      <!-- Profile -->
-      <div class="profile-container">
-        <div class="gradient-ring">
-          <div class="inner-circle">
-            <img src="images/profile.jpg" alt="Albin Jojo" />
+          <!-- Profile -->
+          <div class="profile-container">
+            <div class="gradient-ring">
+              <div class="inner-circle">
+                <img 
+                  src="images/profile.jpg" 
+                  alt="Albin Jojo - Electronics & Computer Engineering Student" 
+                  loading="eager"
+                  width="240"
+                  height="240"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
+      <!-- Projects Section -->
+      <section id="projects" class="projects-section">
+        <div class="projects-grid">
+          <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+            <span class="status-badge" aria-label="Live project">Live</span>
+            <div class="project-image">
+              <img 
+                src="images/RFIDproject.jpg" 
+                alt="Smart RFID Attendance Monitor system interface"
+                loading="lazy"
+                width="400"
+                height="200"
+              />
+            </div>
+            <div class="project-header">
+              <h3 itemprop="name">Smart RFID Attendance Monitor</h3>
+              <span class="project-category">Embedded / IoT</span>
+            </div>
+            <p class="project-description" itemprop="description">
+              Smart attendance monitoring system using edge computing.
+            </p>
+            <div class="tech-tags" role="list" aria-label="Technologies used">
+              <span class="tech-tag" role="listitem">ESP32</span>
+              <span class="tech-tag" role="listitem">RFID</span>
+              <span class="tech-tag" role="listitem">C++</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-date">
+                <time datetime="2024-10-22">22 Oct 2024</time>
+              </span>
+              <a href="#" class="project-link" aria-label="View details of Smart RFID Attendance Monitor">
+                Details
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+            <span class="status-badge" aria-label="Beta project">Beta</span>
+            <div class="project-image">
+              <img 
+                src="images/smartglassProject.jpg" 
+                alt="Smart Glass assistive technology device"
+                loading="lazy"
+                width="400"
+                height="200"
+              />
+            </div>
+            <div class="project-header">
+              <h3 itemprop="name">Smart Glass</h3>
+              <span class="project-category">AI / Assistive Tech</span>
+            </div>
+            <p class="project-description" itemprop="description">
+              AI-powered assistive device for visually challenged individuals.
+            </p>
+            <div class="tech-tags" role="list" aria-label="Technologies used">
+              <span class="tech-tag" role="listitem">Python</span>
+              <span class="tech-tag" role="listitem">OpenCV</span>
+              <span class="tech-tag" role="listitem">Machine Learning</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-date">
+                <time datetime="2025-02-22">22 Feb 2025</time>
+              </span>
+              <a href="#" class="project-link" aria-label="View details of Smart Glass project">
+                Details
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="project-image">
+              <img
+                src="https://techieyantechnologies.com/wp-content/uploads/2025/08/placeholder-12.png"
+                alt="Upcoming project placeholder"
+                loading="lazy"
+                width="400"
+                height="200"
+              />
+            </div>
+            <div class="project-header">
+              <h3 itemprop="name">Mini Project</h3>
+              <span class="project-category">Upcoming</span>
+            </div>
+            <p class="project-description" itemprop="description">
+              Upcoming innovative project.
+            </p>
+            <div class="tech-tags" role="list" aria-label="Technologies to be determined">
+              <span class="tech-tag" role="listitem">TBD</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-date">
+                <time datetime="2026">2026</time>
+              </span>
+              <a href="#" class="project-link" aria-label="Coming soon">
+                Soon
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="project-image">
+              <img
+                src="https://techieyantechnologies.com/wp-content/uploads/2025/08/placeholder-12.png"
+                alt="Strishti 2026 competition project placeholder"
+                loading="lazy"
+                width="400"
+                height="200"
+              />
+            </div>
+            <div class="project-header">
+              <h3 itemprop="name">Strishti 2026</h3>
+              <span class="project-category">Competition</span>
+            </div>
+            <p class="project-description" itemprop="description">
+              National-level technical project showcase.
+            </p>
+            <div class="tech-tags" role="list" aria-label="Project focus">
+              <span class="tech-tag" role="listitem">Innovation</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-date">
+                <time datetime="2026">2026</time>
+              </span>
+              <a href="#" class="project-link" aria-label="Project planned for 2026">
+                Planned
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact Section -->
+    <div id="contact" class="footerBG">
+      <!-- Subtle parallax grid -->
+      <div class="parallax-grid"></div>
+      
+      <h2 class="contact-footer" aria-label="Contact section">Contact</h2>
+      <h2 class="footer-name" aria-hidden="true">Albin</h2>
+      
+      <footer class="clean-footer" role="contentinfo">
+        <div class="clean-footer-card">
+          <div class="contact-content">
+            <h3 class="contact-title">Let's Work Together</h3>
+            <p class="contact-subtitle">
+              I'm always open to discussing new projects, creative ideas, 
+              or opportunities to be part of your vision.
+            </p>
+            
+            <!-- Contact Methods -->
+            <div class="contact-methods">
+              <a href="mailto:albin@example.com" class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-info">
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">albin@example.com</div>
+                </div>
+              </a>
+              
+              <a href="tel:+1234567890" class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div class="contact-info">
+                  <div class="contact-label">Phone</div>
+                  <div class="contact-value">+91 123 456 7890</div>
+                </div>
+              </a>
+              
+              <a href="https://linkedin.com/in/albinjojo" target="_blank" rel="noopener" class="contact-item">
+                <div class="contact-icon">💼</div>
+                <div class="contact-info">
+                  <div class="contact-label">LinkedIn</div>
+                  <div class="contact-value">linkedin.com/in/albinjojo</div>
+                </div>
+              </a>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+              <a href="https://github.com/albinjojo" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                🔗
+              </a>
+              <a href="https://twitter.com/albinjojo" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
+                🐦
+              </a>
+              <a href="https://instagram.com/albinjojo" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                📷
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      <div class="footer-bottom">
+        <span>© 2025 Albin Jojo. All rights reserved.</span>
+      </div>
     </div>
 
-  </section>
-
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <span class="status-badge">Live</span>
-          <div class="project-image">
-            <img src="images/RFIDproject.jpg" alt="Smart RFID Attendance" />
-          </div>
-          <div class="project-header">
-            <h3>Smart RFID Attendance Monitor</h3>
-            <span class="project-category">Embedded / IoT</span>
-          </div>
-          <p class="project-description">
-            Smart attendance monitoring system using edge computing.
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">ESP32</span>
-            <span class="tech-tag">RFID</span>
-            <span class="tech-tag">C++</span>
-          </div>
-          <div class="project-footer">
-            <span class="project-date">22 Oct 2024</span>
-            <a href="#" class="project-link">Details</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <span class="status-badge">Beta</span>
-          <div class="project-image">
-            <img src="images/smartglassProject.jpg" alt="Smart Glass" />
-          </div>
-          <div class="project-header">
-            <h3>Smart Glass</h3>
-            <span class="project-category">AI / Assistive Tech</span>
-          </div>
-          <p class="project-description">
-            AI-powered assistive device for visually challenged individuals.
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">OpenCV</span>
-            <span class="tech-tag">Machine Learning</span>
-          </div>
-          <div class="project-footer">
-            <span class="project-date">22 Feb 2025</span>
-            <a href="#" class="project-link">Details</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image">
-            <img src="https://techieyantechnologies.com/wp-content/uploads/2025/08/placeholder-12.png" alt="Mini Project" />
-          </div>
-          <div class="project-header">
-            <h3>Mini Project</h3>
-            <span class="project-category">Upcoming</span>
-          </div>
-          <p class="project-description">
-            Upcoming innovative project.
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">TBD</span>
-          </div>
-          <div class="project-footer">
-            <span class="project-date">2026</span>
-            <a href="#" class="project-link">Soon</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image">
-            <img src="https://techieyantechnologies.com/wp-content/uploads/2025/08/placeholder-12.png" alt="Strishti 2026" />
-          </div>
-          <div class="project-header">
-            <h3>Strishti 2026</h3>
-            <span class="project-category">Competition</span>
-          </div>
-          <p class="project-description">
-            National-level technical project showcase.
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">Innovation</span>
-          </div>
-          <div class="project-footer">
-            <span class="project-date">2026</span>
-            <a href="#" class="project-link">Planned</a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-  </main>
-
-  <script src="scripts.js"></script>
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>
